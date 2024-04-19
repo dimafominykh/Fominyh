@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Company</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <img class="logo" src="img\logo.png" alt="pic">
+            <div class="wrapper">
+                <div class="offer">
+                    <h1 class="title"> С помощью нас <br> вы можете создать то, о чем </h1>
+                    <span class="title_span">желаете</span>
+                    <p class="offer_text">Наши возможности + опыт позволят Вам достич
+                        огромного успеха. Мы верим в вас! И знаем это на все 100%.
+                        Вас не остановить! </p>
+                    <a href="#" class="btn ">Узнать больше...</a>
+
+                </div>
+                <img class="header-img" src="img\header-img.png" alt="pic">
+
+            </div>
+
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="container">
+            <h2 class="main_title animate__animated animate__slideInDown">Что вам необходимо?</h2>
+            <div class="main_block">
+                <div class="blocks">
+                    <img class="blocks_img" src="img/f3.png" alt="pic">
+                    <h3 class="blocks_title">Первый блок</h3>
+                    <p class="blocks_text">Hfjijv rdnkdnl joilvk n,sjdzbvk hvjhvk dslsdgoi jiwjfdklbpp </p>
+                </div>
+                <div class="blocks">
+                    <img class="blocks_img" src="img/f4.png" alt="pic">
+                    <h3 class="blocks_title">Второй блок</h3>
+                    <p class="blocks_text">Hfjijv rdnkdnl joilvd hjvjv iuyugvh slsdgoi jiwjfdklbpp?</p>
+                </div>
+                <div class="blocks">
+                    <img class="blocks_img" src="img/f5.png" alt="pic">
+                    <h3 class="blocks_title">Третий блок</h3>
+                    <p class="blocks_text">Hfjijv rdnkdnl joilvd jhcjgc jgcjf slsdgoi jiwjfdklbpp!</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="forms">
+        <div class="container">
+            <div class="container-fluid">
+                <div class="row">
+                    <h3 class="forms_title ">Доставка на дом</h3>
+                </div>
+            </div>
+
+            <form class="forms_block" action="#" method="POST" enctype="multipart/form-data">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-8 orderInfo">
+                            <div class="row">
+                                <div class="col-md-4">ФИО закзчика</div>
+                                <div class="col-md-4">
+                                    <input class="Name" id="first" type="text" onblur="checkFirst();" required />
+                                </div>
+                                <div class="col-md-4"><span id="first_Check"></span></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">ФИО получателя</div>
+
+                                <div class="col-md-4">
+                                    <input class="Name" id="last" type="text" onblur="checkLast();"
+                                        placeholder="Совпадает с ФИО заказчика" />
+                                </div>
+
+                                <div class="col-md-4"><span id="last_Check"></span></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">Контактный телефон</div>
+                                <div class="col-md-4"><input class="Name" id="phone" type="text" onblur="checkPhone();"
+                                        placeholder="xxx xxx-xx-xx" required /></div>
+                                <div class="col-md-4"><span id="phone_Check"></span></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">Адрес</div>
+                                <div class="col-md-4"><input class="Name" id="dest" type="text" onblur="checkDest();"
+                                        required placeholder="Регион, Город, Улица, Дом, Квартира" /></div>
+                                <div class="col-md-4"><span id="dest_Check"></span></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">Дата доставки</div>
+                                <div class="col-md-4">
+                                    <input class="Name" id="date" type="date" required />
+                                    <div class="col-md-4">Время, когда вам удобно</div>
+                                    <input class="Name" id="time" type="time" required />
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">Количство товара</div>
+                                <div class="col-md-4"><input class="Name" id="quantity" type="number" min="1" max="20"
+                                        required /></div>
+                                <div class="col-md-4"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">Оплата</div>
+                                <div class="col-md-4">
+                                    <select class="Name" name="paymethod" id="paymethod" required>
+                                        <option>Наличными курьеру</option>
+                                        <option>Картой курьеру</option>
+                                        <option>Онлайн оплата</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
+
+                            <div class="row">
+                                <button class="but_forms" onclick="outputData();">Заказать!</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+
+
+
+
+
+            <form class="forms_block" action="#" method="POST" enctype="multipart/form-data">
+                <h3 class="forms_title ">Форма заказа обрантного звонка</h3>
+
+
+                <div class="name_block">
+                    <input class="Name" type="text" name="username" id="Name" value="" placeholder="Имя" required
+                        minlength="2" maxlength="10">
+                </div>
+                <div class="name_block">
+                    <input class="Name" type="email" name="userpass" id="E-mail" value="" placeholder="E-mail" required>
+                </div>
+                <div class="name_block">
+                    <input class="Name" type="tel" name="tel" id="tel" value="" placeholder="Телефон" minlength="6"
+                        maxlength="11" required>
+                </div>
+
+                <div class="name_block">
+                    <input class="Name" type="text" name="text" id="text" value=""
+                        placeholder="Какая тема вас интересует?">
+                </div>
+
+                <div>
+                    <button type="submit" class="but_forms"> Отправить вопрос! </button>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <section class="end">
+        <div class="container">
+            <p class="end_text">@ все на этом сайте защищено</p>
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
